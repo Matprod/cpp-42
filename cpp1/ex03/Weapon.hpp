@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 17:27:40 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/03 20:49:32 by Matprod          ###   ########.fr       */
+/*   Created: 2025/03/09 20:14:45 by Matprod           #+#    #+#             */
+/*   Updated: 2025/03/09 20:50:56 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+
+#include "iostream"
+#include "iomanip"
+#include "cstdlib"
 #include <string>
 
-int main(int argc, char **argv)
-{
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	for (int i = 1; i < argc; i++)
-	{
-		std::string arg = argv[i];
-		for (size_t j = 0; j < arg.size(); j++)
-			std::cout << (char)std::toupper(arg[j]);
-	}
-	std::cout << std::endl;
-	return (0);
-}
+typedef	std::string string;
+
+class Weapon {
+	public:
+		const string	&getType();
+		void			setType(string type);
+		Weapon();
+		Weapon(string type);
+		~Weapon();
+	private:
+		string _type;
+};
+
+
+#endif

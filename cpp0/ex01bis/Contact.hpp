@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 17:10:55 by Matprod           #+#    #+#             */
-/*   Updated: 2025/02/13 17:21:45 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/03/03 23:46:48 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class	Contact {
 		void	set_darkest_secret();
 		void	show_contact(int id);
 		void	print_trunc(string str);
+		~Contact() {}
 	private:
 		string	_first_name;
 		string	_last_name;

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 17:27:40 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/03 20:49:32 by Matprod          ###   ########.fr       */
+/*   Created: 2025/03/13 10:22:32 by Matprod           #+#    #+#             */
+/*   Updated: 2025/03/13 14:15:33 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#pragma once
+#include "ClapTrap.hpp"
 
-int main(int argc, char **argv)
-{
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	for (int i = 1; i < argc; i++)
-	{
-		std::string arg = argv[i];
-		for (size_t j = 0; j < arg.size(); j++)
-			std::cout << (char)std::toupper(arg[j]);
-	}
-	std::cout << std::endl;
-	return (0);
-}
+# define FRAG_HIT_POINT 100
+# define FRAG_ENERGY_POINT 100
+# define FRAG_ATTACK_DAMAGE 30
+
+class FragTrap : public ClapTrap{
+	public:
+		FragTrap();
+		FragTrap(string _name);
+		FragTrap(FragTrap const &src);
+		FragTrap &operator=( FragTrap const & rhs );
+		~FragTrap();
+		void highFivesGuys();
+};
+

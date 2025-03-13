@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 17:27:40 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/03 20:49:32 by Matprod          ###   ########.fr       */
+/*   Created: 2025/03/13 10:22:32 by Matprod           #+#    #+#             */
+/*   Updated: 2025/03/13 13:46:51 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#pragma once
 
-int main(int argc, char **argv)
-{
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	for (int i = 1; i < argc; i++)
-	{
-		std::string arg = argv[i];
-		for (size_t j = 0; j < arg.size(); j++)
-			std::cout << (char)std::toupper(arg[j]);
-	}
-	std::cout << std::endl;
-	return (0);
-}
+#include "ClapTrap.hpp"
+
+# define SCAV_HIT_POINT 100
+# define SCAV_ENERGY_POINT 50
+# define SCAV_ATTACK_DAMAGE 20
+
+class ScavTrap : public ClapTrap{
+	public:
+		ScavTrap();
+		ScavTrap(string _name);
+		ScavTrap(ScavTrap const &src);
+		ScavTrap &operator=( ScavTrap const & rhs );
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+};
+
