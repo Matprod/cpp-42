@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 21:27:09 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/11 14:28:29 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/03 12:59:35 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int main()
 {
 	{
 		std::cout << "\033[1;29mHuman A(crazyman)!\033[0m" << std::endl << std::endl;
-		Weapon club = Weapon("knife 🔪");
-		HumanA crazyman("crazyman", club);
+		Weapon knife = Weapon("knife 🔪");
+		HumanA crazyman("crazyman", knife);
 		crazyman.attack();
-		club.setType("axe 🪓");
+		knife.setType("axe 🪓");
 		crazyman.attack();
 	}
 	{

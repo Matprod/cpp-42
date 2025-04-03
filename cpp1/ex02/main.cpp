@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:11:58 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/09 20:04:45 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/03 12:57:29 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ int main (void) {
 	std::cout << "\033[1;34m   String value: \033[0;34m" << str << std::endl;
 	std::cout << "\033[1;35mStringPTR value: \033[0;35m" << *stringPTR << std::endl;
 	std::cout << "\033[1;32mStringREF value: \033[0;32m" << stringREF << std::endl;
-
 }

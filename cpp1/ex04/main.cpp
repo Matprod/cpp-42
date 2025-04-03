@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 14:22:03 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/11 15:48:24 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/03 13:22:27 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int argc, char **argv) {
 	string			s2;
 
 	if (argc != 4) {
-		std::cerr << "Error: arguments should be" << argv[0] << " <filename> <replaced_word> <new_word>" << std::endl;
+		std::cerr << "Error: arguments should be " << argv[0] << " <filename> <replaced_word> <new_word>" << std::endl;
 		return (1);
 	}
 	filename = argv[1];
