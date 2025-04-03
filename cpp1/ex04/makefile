@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+         #
+#    By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 14:22:07 by Matprod           #+#    #+#              #
-#    Updated: 2025/03/13 13:15:32 by Matprod          ###   ########.fr        #
+#    Updated: 2025/04/03 14:31:37 by mvoisin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,52 +60,4 @@ fclean:	clean
 			@printf "\033[1;31m========================================\n\033[m"
 
 re:		fclean all
-
-# ===========================
-#       TESTING RULE
-# ===========================
-
-TEST_DIR = tests
-TEST_EXEC = ./replace
-TEST_FILES = file1 file2 file3
-TEST_STATUS = 0
-
-# Création des fichiers de test
-init:
-	mkdir -p $(TEST_DIR)
-	echo "This is a simple test file." > $(TEST_DIR)/file1
-	echo "Hello world! Hello again!" > $(TEST_DIR)/file2
-	echo "The quick brown fox jumps over the lazy dog." > $(TEST_DIR)/file3
-	echo "Résultats attendus après transformation :"
-	echo "This is a sample test file." > $(TEST_DIR)/file1_expected
-	echo "Hi world! Hi again!" > $(TEST_DIR)/file2_expected
-	echo "The fast brown fox jumps over the lazy dog." > $(TEST_DIR)/file3_expected
-
-test: $(NAME) init
-	@echo "🛠️  Running tests..."
-	@TEST_STATUS=0; \
-	for file in $(TEST_FILES); do \
-		orig="$(TEST_DIR)/$$file"; \
-		expected="$(TEST_DIR)/$${file}_expected"; \
-		result="$(TEST_DIR)/$$file.replace"; \
-		# Remplacements spécifiques pour chaque test \
-		if [ "$$file" = "file1" ]; then $(TEST_EXEC) "$$orig" "simple" "sample"; fi; \
-		if [ "$$file" = "file2" ]; then $(TEST_EXEC) "$$orig" "Hello" "Hi"; fi; \
-		if [ "$$file" = "file3" ]; then $(TEST_EXEC) "$$orig" "quick" "fast"; fi; \
-		# Vérification du résultat \
-		if diff "$$result" "$$expected" > /dev/null; then \
-			echo "✅ $$file: Test Passed!"; \
-		else \
-			echo "❌ $$file: Test Failed!"; \
-			TEST_STATUS=1; \
-		fi; \
-	done; \
-	if [ $$TEST_STATUS -eq 0 ]; then \
-		echo "🎉 All tests passed!"; \
-	else \
-		echo "❌ Some tests failed!"; \
-	fi
-clean_tests:
-		@rm -rf $(TEST_DIR)
-		@echo "🧹 Test files cleaned!"
 

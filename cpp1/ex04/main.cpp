@@ -6,7 +6,7 @@
 /*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 14:22:03 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/03 13:22:27 by mvoisin          ###   ########.fr       */
+/*   Updated: 2025/04/03 15:25:38 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,18 @@ void	find_and_replaced(std::ifstream &infile, std::ofstream &outfile, const stri
 {
 	string line;
 	size_t pos;
-
+	bool last_line_empty = false;
+	infile.seekg(0, std::ios::end);
+	std::streampos fileSize = infile.tellg();
+	if (fileSize > 0) {
+		infile.seekg(fileSize - static_cast<std::streamoff>(1));
+		char lastChar;
+		infile.get(lastChar);			
+		if (lastChar != '\n') {
+			last_line_empty = true;
+		}
+	}
+	infile.seekg(0, std::ios::beg);
 	while (std::getline(infile, line)) {
 		pos = 0;
 		string new_line;
@@ -31,7 +42,10 @@ void	find_and_replaced(std::ifstream &infile, std::ofstream &outfile, const stri
 			pos = 0;
 		}
 		new_line += line;
-		outfile << new_line << std::endl;
+		if (last_line_empty == false)
+			outfile << new_line << std::endl;
+		else
+			outfile << new_line;
 	}
 }
 
