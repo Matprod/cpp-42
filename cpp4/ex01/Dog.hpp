@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 15:27:07 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 13:45:54 by Matprod          ###   ########.fr       */
+/*   Created: 2025/03/13 15:20:19 by Matprod           #+#    #+#             */
+/*   Updated: 2025/04/02 14:17:30 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 #include "Animal.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
 private:
-	string _type;
+	string	_type;
+	Brain	*_brain;
 public:
-	Cat();
-	Cat(string name);
-	Cat(Cat const &rhs);
-	Cat &operator=(Cat const &rhs);
-	~Cat();
+	Dog();
+	Dog(string name);
+	Dog(Dog const &rhs);
+	Dog &operator=(Dog const &rhs);
+	~Dog();
 	string	getType() const;
 	string	getName() const;
 	void	makeSound( void ) const;
+	void	addIdea		( string ) const;
+	void	printIdeas	( void ) const;
 };
+
+
