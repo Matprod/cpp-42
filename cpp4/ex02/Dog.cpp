@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:19:13 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 14:18:28 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/08 19:17:05 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ Dog::Dog(Dog const &src) : Animal(src)
 }
 Dog &Dog::operator=(Dog const &src)
 {
-	if (this != &rhs)
+	if (this != &src)
 	{
-		_type = rhs.getType();
-		_name = rhs.getName();
-		_brain = new Brain(*rhs._brain);
+		_type = src.getType();
+		_name = src.getName();
+		_brain = new Brain(*src._brain);
 	}
 	return (*this);
 }

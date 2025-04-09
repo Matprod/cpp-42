@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:02:15 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/03 16:28:13 by mvoisin          ###   ########.fr       */
+/*   Updated: 2025/04/08 19:48:07 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

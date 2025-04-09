@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 13:42:47 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/28 13:42:52 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/08 19:16:28 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 int getRandomNumber(int min, int max) {
     int randomNum = std::rand() % (max - min + 1) + min; // Générer un nombre entier aléatoire entre min et max inclus
@@ -79,7 +82,7 @@ void	BrainTest( void ) {
 	{
 		cout << BOLD_CYAN"Please enter an idea for the cat 🧠 :" CYAN << endl;
 		getline(cin, input);
-		if (cin.eof())................
+		if (cin.eof())
 			break ;
 		if (input == "exit")
 			break ;

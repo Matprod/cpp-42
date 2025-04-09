@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:26:34 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 14:18:37 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/08 19:16:51 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ Cat::Cat(Cat const &src) : Animal(src)
 }
 Cat &Cat::operator=(Cat const &src)
 {
-	if (this != &rhs)
+	if (this != &src)
 	{
-		_type = rhs.getType();
-		_name = rhs.getName();
-		_brain = new Brain(*rhs._brain);
+		_type = src.getType();
+		_name = src.getName();
+		_brain = new Brain(*src._brain);
 	}
 	return (*this);
 }

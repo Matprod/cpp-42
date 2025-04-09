@@ -5,27 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/13 09:25:45 by Matprod           #+#    #+#              #
-#    Updated: 2025/03/13 13:14:57 by Matprod          ###   ########.fr        #
+#    Created: 2025/04/08 19:17:23 by Matprod           #+#    #+#              #
+#    Updated: 2025/04/08 19:45:05 by Matprod          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= $(addsuffix .cpp, main ClapTrap)
+SRCS	= $(addsuffix .cpp, main AMateria Character Ice Cure MateriaSource)
 OBJS	= $(SRCS:%.cpp=.build/%.o)
 
-NAME	= ClapTrap
+NAME	= amateria
 CC		= c++
 RM		= rm -rf
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
-HEADERS = ClapTrap.hpp
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 
+
 INCLUDE = -I ./
+HEADER  = $(addsuffix .hpp, AMateria ICharacter Character Ice Cure MateriaSource IMateriaSource)
 
 flag:=1
 .build/%.o : %.cpp $(HEADER)
 		@if [ $(flag) = "1" ]; then\
 			clear ;\
 			printf "\033[1;35m========================================\n";\
-			printf "|       🧟 CPP03 EX00 LOADING... 🧟    |\n";\
+			printf "|          CPP04 EX01 LOADING...       |\n";\
 			printf "========================================\n";\
 			printf "|                                      |\n";\
 			printf "|                                      |\n\033[A\033[A";\
@@ -39,17 +40,17 @@ flag:=1
 
 $(NAME):$(OBJS)
 		@setterm -cursor on
-		@printf "\033[K\033[1;32m| CPP03 Ex00 : compiled                |\n\033[m"
+		@printf "\033[K\033[1;32m| CPP04 Ex01 : compiled                |\n\033[m"
 		@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@printf "\033[1;32m========================================\n"
-		@printf "|       🧟 COMPILATION FINISHED ! 🧟   |\n"
+		@printf "|          COMPILATION FINISHED !      |\n"
 		@printf "========================================\n\033[m"
 
 all: $(NAME)
 
 clean:
 			@printf "\033[1;31m========================================\n"
-			@printf "|       🪦  CPP03 EX00 CLEANING 🪦       |\n"
+			@printf "|           CPP04 EX01 CLEANING        |\n"
 			@printf "========================================\n\033[m"
 			@printf "\033[K\033[1;31m|\033[1;33m Destroying objects                   \033[1;31m|\n\033[m"
 			@$(RM) .build

@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:34:37 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/03 16:35:23 by mvoisin          ###   ########.fr       */
+/*   Updated: 2025/04/08 18:48:05 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 # define MAX_MATERIA 4
 
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 class Character : public ICharacter
 {
 	private:

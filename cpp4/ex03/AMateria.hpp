@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:56:52 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/03 16:11:31 by mvoisin          ###   ########.fr       */
+/*   Updated: 2025/04/08 19:55:49 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include <typeinfo>
 
 # include "ICharacter.hpp"
 
@@ -44,6 +45,8 @@
 # define UNDERLINE_CYAN "\033[4;36m"
 # define UNDERLINE_WHITE "\033[4;37m"
 
+# define RESET "\033[0m"
+
 using	std::string;
 using	std::cout;
 using	std::endl;
@@ -53,13 +56,13 @@ class	AMateria {
 	protected:
 		string	_type;
 	public:
-		AMateria						(string const &type);
-		AMateria						(const AMateria &rhs);
-		AMateria			&operator=	(const AMateria &rhs);
-		virtual ~AMateria				(void);
+		AMateria						( string const &type );
+		AMateria						( const AMateria &rhs );
+		AMateria 			&operator=	( const AMateria &rhs );
+		virtual ~AMateria				( void );
 		
-		string const		&getType	(void) const;
+		string const		&getType	( void ) const;
 		virtual AMateria	*clone		() const = 0;
-		virtual void		use			(ICharacter &target);
+		virtual void		use			( ICharacter &target);
 };
 
