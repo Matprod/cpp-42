@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 23:27:06 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/12 23:27:09 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/10 21:14:52 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Fixed {
 		Fixed(const float f);
 		~Fixed();
 
-		Fixed&	operator=(Fixed const &rSym);
+		Fixed&	operator=(Fixed const &rhs);
 		int		getRawBits() const;
 		void	setRawBits(int const raw);
 		float	toFloat() const;

@@ -6,7 +6,7 @@
 /*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 23:26:54 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/12 23:27:02 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/10 21:14:29 by Matprod          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed&	Fixed::operator=(Fixed const &rSym) {
+Fixed&	Fixed::operator=(Fixed const &rhs) {
 	std::cout << "Copy assignement operator called" << std::endl;
-	if (this != &rSym)
-		this->value = rSym.getRawBits();
+	if (this != &rhs)
+		this->value = rhs.getRawBits();
 	return *this;
 }
 
@@ -60,7 +60,7 @@ int		Fixed::toInt() const {
 	return this->value >> bits;
 }
 
-std::ostream&	operator<<(std::ostream& o, Fixed const &rSym) {
-	o << rSym.toFloat();
+std::ostream&	operator<<(std::ostream& o, Fixed const &rhs) {
+	o << rhs.toFloat();
 	return o;
 }
