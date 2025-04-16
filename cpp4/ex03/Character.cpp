@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 18:46:16 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/08 18:47:25 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:41:37 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void			Character::equip( AMateria *materia ) {
 			_inventory[i] = materia;
 			_materiaCount++;
 			cout << BOLD_YELLOW << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;
-			cout <<  _name << YELLOW" equiped materia at index " << i << RESET << endl;
+			cout <<  _name << YELLOW" equiped materia "<< BOLD_MAGENTA << materia->getType()<< RESET<< " at index " << i << RESET << endl;
 			return ;
 		}
 	}

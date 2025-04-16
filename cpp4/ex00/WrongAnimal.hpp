@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 16:37:13 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 17:05:11 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:43:55 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class WrongAnimal {
 		virtual ~WrongAnimal();
 		virtual string	getType() const;
 		virtual	string	getName() const;
-		void	makeSound( void ) const;
+		void	makeSound( void );
 	protected:
 		string	_type;
 		string	_name;

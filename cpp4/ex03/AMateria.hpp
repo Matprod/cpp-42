@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:56:52 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/08 19:55:49 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:36:44 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,10 @@
 # define RESET "\033[0m"
 
 using	std::string;
-using	std::cout;
 using	std::endl;
+using	std::cout;
 
+class ICharacter;
 
 class	AMateria {
 	protected:

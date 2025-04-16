@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:28:49 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 16:05:50 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:39:16 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Animal::Animal(){
 
 Animal::Animal(string name){
 	_name = name;
-	cout << BOLD_YELLOW"Animal :" << RESET << name << "created" << endl;
+	cout << BOLD_YELLOW"Animal :" << RESET << name << " created" << endl;
 	_type = "Animal";
 }
 

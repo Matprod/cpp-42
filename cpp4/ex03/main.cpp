@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:06:02 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/08 19:49:11 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:38:53 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,18 @@ int main()
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-	ICharacter* me = new Character("me");
+	Character* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
+	Character* copy = new Character(*me);
 	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
+	copy->use(0, *bob);
+	copy->use(1, *bob);
+
+	delete copy;
 	delete bob;
 	delete me;
 	delete src;

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:29:40 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/08 18:15:53 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:37:24 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+
 Cure::Cure( void ) : AMateria("cure") {
 	cout << BOLD_GREEN << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;
 	cout <<  _type << GREEN" created !" << RESET << endl;
 }
-
 
 Cure::Cure( Cure const &rhs ) : AMateria(rhs) {
 	*this = rhs;
@@ -37,12 +37,9 @@ Cure::~Cure( void ) {
 		cout <<  _type << RED" destroyed !" << RESET << endl;
 }
 
-
 AMateria	*Cure::clone( void ) const {
 	return (new Cure(*this));
 }
-
-return void
 
 void		Cure::use( ICharacter &target ) {
 	cout << BOLD_BLUE << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;

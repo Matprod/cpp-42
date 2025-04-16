@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:04:57 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/08 19:05:46 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:38:12 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource( void ) : _count(0) {
-	cout << BOLD_GREEN << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;
+	cout << BOLD_GREEN << "[" << typeid(*this).name() + 2 << "] " RESET UNDERLINE_WHITE;
 	cout <<  "MateriaSource created !" << RESET << endl;
 	for (int i = 0; i < MAX_MATERIA; i++)
 		_materia[i] = NULL;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:29:43 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 17:08:16 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:45:21 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,9 +138,9 @@ void	wrongCatTest( void ) {
 
 	cout << BOLD_GREEN"Creation of the \"cats\" 🦁:" << endl;
 	cout << YELLOW"\033[3mDefault constructor" RESET << endl;
-	const WrongAnimal	*default_lion = new WrongCat();
+	WrongAnimal	*default_lion = new WrongCat();
 	cout << YELLOW"\033[3mNormal constructor" RESET << endl;
-	const WrongCat		*lion = new WrongCat("Nordminette");
+	WrongCat		*lion = new WrongCat("Nordminette");
 	cout << YELLOW"\033[3mCopy constructor" RESET << endl;
 	const WrongCat		lion_copy(*lion);
 	cout << YELLOW"\033[3mAssignement constructor" RESET << endl;
@@ -165,15 +165,15 @@ void	wrongCatTest( void ) {
 	delete lion;
 }
 
-/* int main()
+int main()
 {
 	animalsTest();
 	catsTest();
 	dogsTest();
 	wrongCatTest();
-} */
+} 
 
-int main()
+/* int main()
 {
 const WrongAnimal* meta = new WrongAnimal();
 const Animal* j = new Dog();
@@ -184,4 +184,4 @@ i->makeSound(); //will output the cat sound!
 j->makeSound();
 meta->makeSound();
 return 0;
-}
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:19:13 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 15:52:35 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:39:10 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog(){
 }
 
 Dog::Dog(string name) : Animal(name){
-	cout << BOLD_BLUE"Dog :" << RESET << name << "created" << endl;
+	cout << BOLD_BLUE"Dog :" << RESET << name << " created" << endl;
 	_type = "Dog";
 }
 

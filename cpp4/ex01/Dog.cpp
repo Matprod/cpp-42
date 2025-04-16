@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:19:13 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 14:18:28 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:53:21 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ Dog::Dog(Dog const &src) : Animal(src)
 }
 Dog &Dog::operator=(Dog const &src)
 {
-	if (this != &rhs)
+	if (this != &src)
 	{
-		_type = rhs.getType();
-		_name = rhs.getName();
-		_brain = new Brain(*rhs._brain);
+		_type = src.getType();
+		_name = src.getName();
+		_brain = new Brain(*src._brain);
 	}
 	return (*this);
 }

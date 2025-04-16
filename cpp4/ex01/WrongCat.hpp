@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 16:40:03 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 14:13:43 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:40:19 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ public:
 	~WrongCat();
 	string	getType() const;
 	string	getName() const;
-	void	makeSound( void ) const;
 };

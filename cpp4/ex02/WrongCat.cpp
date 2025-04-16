@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:26:34 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 16:49:39 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:40:54 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,4 @@ string	WrongCat::getType() const {
 
 string	WrongCat::getName() const {
 	return (_name);
-}
-void	WrongCat::makeSound( void ) const {
-	cout << BOLD_CYAN"WrongCat " << RESET << _name << ": \033[3m *meuuuuuuuuuuuuuuuuuh*" << endl;
 }

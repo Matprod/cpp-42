@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:28:49 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 16:49:16 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:45:37 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ string	WrongAnimal::getName() const {
 	return (_name);
 }
 
-void	WrongAnimal::makeSound( void ) const {
+void	WrongAnimal::makeSound( void ){
 	cout << BOLD_GREEN"WrongAnimal " << RESET << _name << ": \033[3m *Wrong Animal making noises*" << endl;
 }

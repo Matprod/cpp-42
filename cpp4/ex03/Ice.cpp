@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 16:02:10 by mvoisin           #+#    #+#             */
-/*   Updated: 2025/04/08 18:13:30 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 17:37:13 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Ice.hpp"
 
 Ice::Ice( void ) : AMateria("ice") {
 	cout << BOLD_GREEN << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;
@@ -40,8 +42,6 @@ Ice::~Ice( void ) {
 AMateria	*Ice::clone( void ) const {
 	return (new Ice(*this));
 }
-
-return void
 
 void		Ice::use( ICharacter &target ) {
 	cout << BOLD_BLUE << "[" << typeid(*this).name() + 1 << "] " RESET UNDERLINE_WHITE;

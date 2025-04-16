@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:26:34 by Matprod           #+#    #+#             */
-/*   Updated: 2025/03/13 16:07:58 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:39:24 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat(){
 }
 
 Cat::Cat(string name) : Animal(name){
-	cout << BOLD_MAGENTA"Cat :" << RESET << name << "created" << endl;
+	cout << BOLD_MAGENTA"Cat :" << RESET << name << " created" << endl;
 	_type = "Cat";
 	_name = name;
 }

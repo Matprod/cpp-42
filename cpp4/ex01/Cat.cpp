@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:26:34 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/02 14:18:37 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:42:01 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat(){
 }
 
 Cat::Cat(string name) : Animal(name){
-	cout << BOLD_MAGENTA"Cat :" << RESET << name << "created" << endl;
+	cout << BOLD_MAGENTA"Cat :" << RESET << name << " created" << endl;
 	_type = "Cat";
 	_name = name;
 	_brain = new Brain();
@@ -35,11 +35,11 @@ Cat::Cat(Cat const &src) : Animal(src)
 }
 Cat &Cat::operator=(Cat const &src)
 {
-	if (this != &rhs)
+	if (this != &src)
 	{
-		_type = rhs.getType();
-		_name = rhs.getName();
-		_brain = new Brain(*rhs._brain);
+		_type = src.getType();
+		_name = src.getName();
+		_brain = new Brain(*src._brain);
 	}
 	return (*this);
 }
