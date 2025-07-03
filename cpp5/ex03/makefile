@@ -13,7 +13,7 @@ flag:=1
 		@if [ $(flag) = "1" ]; then\
 			clear ;\
 			printf "\033[1;35m========================================\n";\
-			printf "|       🧟 CPP05 EX00 LOADING... 🧟    |\n";\
+			printf "|          CPP05 EX00 LOADING...       |\n";\
 			printf "========================================\n";\
 			printf "|                                      |\n";\
 			printf "|                                      |\n\033[A\033[A";\
@@ -31,7 +31,7 @@ $(NAME):$(OBJS)
 		@printf "\033[K\033[1;32m| CPP05 Ex00 : compiled                |\n\033[m"
 		@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@printf "\033[1;32m========================================\n"
-		@printf "|       🧟 COMPILATION FINISHED ! 🧟   |\n"
+		@printf "|         COMPILATION FINISHED !     |\n"
 		@printf "========================================\n\033[m"
 
 all: $(NAME)

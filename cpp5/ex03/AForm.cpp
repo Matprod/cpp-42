@@ -41,7 +41,7 @@ AForm	&AForm::operator=( AForm const & rhs ) {
 		_signed = rhs._signed;
 	}
 		cout << BOLD_GREEN "[" << typeid(*this).name() + 1 << "] ";
-		cout << RESET UNDERLINE_WHITE << _name << GREEN" acreated by assignation" RESET << endl;
+		cout << RESET UNDERLINE_WHITE << _name << GREEN" created by assignation" RESET << endl;
 	return *this;
 }
 

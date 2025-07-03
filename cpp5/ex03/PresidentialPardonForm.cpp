@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 14:51:35 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/28 14:53:35 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/07/03 17:42:34 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=( PresidentialPardonFor
 		_target = rhs._target;
 	}
 	cout << BOLD_GREEN "[" << typeid(*this).name() + 2 << "] ";
-	cout << RESET UNDERLINE_WHITE << _name << GREEN" acreated by assignation" RESET << endl;
+	cout << RESET UNDERLINE_WHITE << _name << GREEN" created by assignation" RESET << endl;
 	return *this;
 }
 

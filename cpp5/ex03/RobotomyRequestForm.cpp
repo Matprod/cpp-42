@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 16:48:31 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/28 16:48:37 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/07/03 17:42:37 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=( RobotomyRequestForm const &
 		_target = rhs._target;
 	}
 		cout << BOLD_GREEN "[" << typeid(*this).name() + 2 << "] ";
-		cout << RESET UNDERLINE_WHITE << _name << GREEN" acreated by assignation" RESET << endl;
+		cout << RESET UNDERLINE_WHITE << _name << GREEN" created by assignation" RESET << endl;
 	return *this;
 }
 
