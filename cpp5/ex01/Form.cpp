@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Matprod <matprod42@gmail.com>              +#+  +:+       +#+        */
+/*   By: mvoisin <mvoisin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 17:54:30 by Matprod           #+#    #+#             */
-/*   Updated: 2025/04/28 13:11:24 by Matprod          ###   ########.fr       */
+/*   Updated: 2025/07/03 17:57:50 by mvoisin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,11 @@ void	Form::beSigned( Bureaucrat const & bureaucrat ) {
 }
 
 const char	*Form::GradeTooHighException::what() const throw() {
-	return (BOLD_RED "[Form] " RED"Bureaucrat's grade is too high" RESET);
+	return (BOLD_RED "[Form] " RED"Form's grade is too high" RESET);
 }
 
 const char	*Form::GradeTooLowException::what() const throw() {
-	return (BOLD_RED "[Form] " RED"Bureaucrat's grade is too low" RESET);
+	return (BOLD_RED "[Form] " RED"Form's grade is too low" RESET);
 }
 
 std::ostream	&operator<<( std::ostream & o, Form const & rhs ) {

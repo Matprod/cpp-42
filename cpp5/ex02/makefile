@@ -13,7 +13,7 @@ flag:=1
 		@if [ $(flag) = "1" ]; then\
 			clear ;\
 			printf "\033[1;35m========================================\n";\
-			printf "|       🧟 CPP05 EX00 LOADING... 🧟    |\n";\
+			printf "|          CPP05 EX00 LOADING...       |\n";\
 			printf "========================================\n";\
 			printf "|                                      |\n";\
 			printf "|                                      |\n\033[A\033[A";\
@@ -31,7 +31,7 @@ $(NAME):$(OBJS)
 		@printf "\033[K\033[1;32m| CPP05 Ex00 : compiled                |\n\033[m"
 		@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@printf "\033[1;32m========================================\n"
-		@printf "|       🧟 COMPILATION FINISHED ! 🧟   |\n"
+		@printf "|          COMPILATION FINISHED !      |\n"
 		@printf "========================================\n\033[m"
 
 all: $(NAME)
@@ -42,6 +42,7 @@ clean:
 			@printf "========================================\n\033[m"
 			@printf "\033[K\033[1;31m|\033[1;33m Destroying objects                   \033[1;31m|\n\033[m"
 			@$(RM) .build
+			@rm forest_shrubbery
 
 fclean:	clean
 			@printf "\033[K\033[1;31m|\033[1;31m Destroying all                       \033[1;31m|\n\033[m"
